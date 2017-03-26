@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170326071416) do
+ActiveRecord::Schema.define(version: 20170326072541) do
+
+  create_table "equibs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "department"
+    t.string   "position"
+    t.string   "principal"
+    t.date     "purchase_date"
+    t.boolean  "is_for_production", default: true
+    t.string   "use_state"
+    t.string   "origin"
+    t.string   "model"
+    t.string   "supplier"
+    t.integer  "warranty"
+    t.text     "description"
+    t.integer  "price"
+    t.integer  "age_limit"
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
