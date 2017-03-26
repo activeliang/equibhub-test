@@ -1,0 +1,23 @@
+<h2 class="text-center">设备属性<small><%= @equib.title%>(<%= @equib.position%>)</small>
+</h2>
+
+<h5>机器名称：<%= @equib.title%></h5>
+<h5>机器备注：<%= @equib.description%></h5>
+<h5>所属部门：<%= @equib.department%></h5>
+<h5>存放位置：<%= @equib.position%></h5>
+<h5>机器型号：<%= @equib.model%></h5>
+<h5>负责人：<%= @equib.principal%></h5>
+<h5>供应商：<%= @equib.supplier%></h5>
+<h5>保修期<%= @equib.warranty%></h5>
+<h5>产地：<%= @equib.origin%></h5>
+<h5>购入日期：<%= @equib.purchase_date%></h5>
+<h5>是否为生产设备：<%= @equib.is_for_production%></h5>
+<h5>价格：<%= @equib.price%></h5>
+<h5>年限<%= @equib.age_limit%></h5>
+<h5>使用状态：<%= @equib.use_state%></h5>
+
+<br/>
+
+<span class="text-center">
+    <%= link_to("修改属性", edit_admin_equib_path(@equib),class: "btn btn-primary")%>
+</span>
