@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   root 'admin/equibs#index'
 
   namespace :admin do
-    resources :equibs
+    resources :equibs do
+    collection do
+      get :meter
+    end
+  end 
   end
+
+  resources :equibs
 end

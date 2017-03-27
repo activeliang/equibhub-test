@@ -1,0 +1,13 @@
+<h2 class="text-center">设备信息<small><%= @equib.title %>(<%= @equib.department %>)</small>
+</h2>
+
+<div class="group-info">设备名称：<%= @equib.title%></div>
+<div class="group-info">备注：<%= @equib.description%></div>
+<div class="group-info">所属部门：<%= @equib.department%></div>
+<div class="group-info">负责人：<%= @equib.principal%></div>
+<div class="group-info">使用状态：<%= @equib.use_state%></div>
+<div class="group-info">产地：<%= @equib.origin%></div>
+<div class="group-info">型号：<%= @equib.model%></div>
+<div class="group-info">购买日期：<%= @equib.purchase_date%></div>
+<div class="group-info">是否为生产设备：<%= @equib.is_for_production%></div>
+<%= link_to("纠错", '#',class: "btn btn-info btn-xs pull-right")%>

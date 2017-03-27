@@ -41,6 +41,11 @@ class Admin::EquibsController < ApplicationController
     redirect_to admin_equibs_path, alert: "已删除！"
   end
 
+  def meter
+    @equibs = Equib.all
+    flash[:notice] = "hahahahab"
+  end
+
   private
 
   def equib_params
