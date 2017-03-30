@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "172.104.33.191", user: "equibhub-test", roles: %w{app db web}, my_property: :my_value
+server "172.104.33.191", user: "apps", roles: %w{app db web}, my_property: :my_value
 
 
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
