@@ -1,6 +1,7 @@
 class Admin::EquibsController < ApplicationController
-  before_action :authenticate_user!, only:[:new,:create]
-
+  before_action :authenticate_user!
+  before_action :admin_required
+  layout "admin"
   def new
     @equib = Equib.new
   end
@@ -33,6 +34,7 @@ class Admin::EquibsController < ApplicationController
 
   def show
     @equib = Equib.find(params[:id])
+    @repairs = @equib.repairs
   end
 
   def destroy

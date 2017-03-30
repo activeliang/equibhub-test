@@ -10,4 +10,28 @@
 <div class="group-info">型号：<%= @equib.model%></div>
 <div class="group-info">购买日期：<%= @equib.purchase_date%></div>
 <div class="group-info">是否为生产设备：<%= @equib.is_for_production%></div>
-<%= link_to("纠错", '#',class: "btn btn-info btn-xs pull-right")%>
+<hr/>
+<%= link_to("纠错", '#',class: "btn btn-info btn-md ")%>
+<br/>
+<hr/>
+<%= link_to("添加维修记录",new_equib_repair_path(@equib), class: "btn btn-danger")%>
+<h2 class="text-center">维修记录</h2>
+<p class="pull-right">
+    累计维修金额
+    <span class="label label-danger" style="font-size:200%">
+        ¥<%= render_total_fees(@equib)%></span>
+</p>
+<% @repairs.each do |repair| %>
+<div class="col-xs-12 well">
+    <p>维修原因：<%= repair.cause %></p>
+    <h5>维修费用：<%= repair.fees %>
+        <% if repair.is_wireman? %>
+        <span class="label label-success label-sm">内部维修</span>
+    <% else %>
+        <span class="label label-danger label-sm">外部维修</span>
+        <% end %>
+    </h5>
+    <p><%= repair.created_at.to_s(:long)%></p>
+
+</div>
+<% end %>

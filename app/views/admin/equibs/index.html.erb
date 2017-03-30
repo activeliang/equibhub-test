@@ -1,7 +1,7 @@
 <h2 class="text-center">机器列表</h2>
 
 <%= link_to("新增设备",new_admin_equib_path, class:"btn btn-success pull-right")%>
-<%= link_to("进入数据分析页面",meter_admin_equibs_path, class: "btn btn-info pull-right")%>
+<%= link_to("进入数据分析页面",dashboard_admin_equibs_path, class: "btn btn-info pull-right")%>
 
 <table class="table table-bordered table-hover">
     <thead>
@@ -27,7 +27,11 @@
         <% end %>
     </tbody>
 </table>
-<span>
-    总量
-    <%= render_equibs_total_price(@equibs) %>
-</span>
+<div class="group total">
+    <h3>资产总额</h3>
+    <span class="label label-success" style="font-size:150%">
+        <%= render_total_price %>
+        CNY
+    </span>
+
+</div>
