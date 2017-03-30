@@ -16,3 +16,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+table {
+    border-width: 0;
+    border-style: none;
+    border-color: #0000ff;
+    border-collapse: collapse;
+}
+
+td {
+    border-left: solid 10px #000;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 10px;
+}
+
+td.black {
+    border-color: #000;
+}
+
+td.white {
+    border-color: #fff;
+}

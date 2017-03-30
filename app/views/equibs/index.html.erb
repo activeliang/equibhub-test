@@ -8,6 +8,8 @@
             <th>机器名称</th>
             <th>所属部门</th>
             <th>存放位置</th>
+            <th>购买日期</th>
+            <th>型号</th>
 
         </tr>
     </thead>
@@ -28,6 +30,8 @@
             <td><%= link_to(equib.title,equib_path(equib))%></td>
             <td><%= equib.department %></td>
             <td><%= equib.position %></td>
+            <td><%= equib.purchase_date %></td>
+            <td><%= equib.model %></td>
 
         </tr>
         <% end %>

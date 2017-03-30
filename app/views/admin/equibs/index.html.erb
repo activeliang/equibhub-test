@@ -1,7 +1,13 @@
-<h2 class="text-center">机器列表</h2>
+<h3 class="text-center">设备列表</h3>
+<hr/>
 
-<%= link_to("新增设备",new_admin_equib_path, class:"btn btn-success pull-right")%>
-<%= link_to("进入数据分析页面",dashboard_admin_equibs_path, class: "btn btn-info pull-right")%>
+<div style="padding-buttom: 10px;">
+    <%= link_to("新增设备",new_admin_equib_path, class:"btn btn-success pull-right btn-lg")%>
+    <!-- <%= link_to("进入数据分析页面",dashboard_admin_equibs_path, class: "btn btn-info pull-right")%> -->
+</div>
+<br/>
+<br/>
+<br/>
 
 <table class="table table-bordered table-hover">
     <thead>
@@ -37,14 +43,16 @@
         <% end %>
     </tbody>
 </table>
-<div class="group total">
-    <h3>资产总额</h3>
+<div class="group total pull-right">
+    <span style="font-size:20px;">资产总额</span>
     <span class="label label-success" style="font-size:150%">
         <%= render_total_price %>
         CNY
     </span>
 
 </div>
+<br/>
+<hr/>
 
 <div class="download-group">
     <h3>导出到 Excel</h3>

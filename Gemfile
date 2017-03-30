@@ -42,6 +42,7 @@ gem 'simple_form'
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'spreadsheet'
+gem 'rqrcode'
 
 
 group :development, :test do

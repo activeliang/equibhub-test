@@ -41,6 +41,15 @@ class Admin::EquibsController < ApplicationController
   def show
     @equib = Equib.find(params[:id])
     @repairs = @equib.repairs
+    require 'rqrcode'
+
+   qrcode = RQRCode::QRCode.new("http://github.com/")
+   image = qrcode.as_png
+   svg = qrcode.as_svg
+   html = qrcode.as_html
+   string = qrcode.as_ansi
+   string = qrcode.to_s
+    @qr = RQRCode::QRCode.new(equib_url(@equib).to_s, :size => 4, :level => :h )
   end
 
   def destroy
