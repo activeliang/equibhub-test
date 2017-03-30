@@ -1,8 +1,8 @@
 # config valid only for current version of Capistrano
 lock "3.8.0"
 
-set :application, "equibhub"
-set :repo_url, "git@github.com:activeliang/equibhub.git"
+set :application, "equibhub-test"
+set :repo_url, "git@github.com:activeliang/equibhub-test.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -10,7 +10,7 @@ set :repo_url, "git@github.com:activeliang/equibhub.git"
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
 
-set :deploy_to, '/home/apps/equibhub'
+set :deploy_to, '/home/apps/equibhub-test'
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
