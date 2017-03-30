@@ -41,6 +41,7 @@ gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'mini_magick'
 gem 'carrierwave'
+gem 'spreadsheet'
 
 
 group :development, :test do
