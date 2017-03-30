@@ -1,6 +1,7 @@
 class Equib < ApplicationRecord
 
   has_many :repairs
+  mount_uploader :image, ImageUploader
 
   def self.total_price
     sum = 0

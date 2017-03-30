@@ -7,6 +7,7 @@
     <thead>
         <tr>
             <th>#</th>
+            <th>图片</th>
             <th>机器名称</th>
             <th>所属部门</th>
             <th>存放位置</th>
@@ -17,6 +18,15 @@
         <% @equibs.each do |equib| %>
         <tr>
             <td><%= equib.id %></td>
+            <td>
+                <%= link_to admin_equib_path(equib) do %>
+                <% if equib.image.present? %>
+                <%= image_tag(equib.image.thumb.url, class: "thumbnail")%>
+            <% else%>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail")%>
+                <% end %>
+                <% end %>
+            </td>
             <td><%= link_to(equib.title,admin_equib_path(equib))%></td>
             <td><%= equib.department %></td>
             <td><%= equib.position %></td>

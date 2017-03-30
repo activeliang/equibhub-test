@@ -51,6 +51,6 @@ class Admin::EquibsController < ApplicationController
   private
 
   def equib_params
-    params.require(:equib).permit(:title, :department, :position, :principal, :purchase_date, :is_for_production, :use_state, :origin, :model, :supplier, :warranty, :description, :price, :age_limit)
+    params.require(:equib).permit(:title, :department, :position, :principal, :purchase_date, :is_for_production, :use_state, :origin, :model, :supplier, :warranty, :description, :price, :age_limit, :image)
   end
 end

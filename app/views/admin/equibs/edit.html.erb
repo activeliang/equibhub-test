@@ -15,5 +15,12 @@
 <div class="group_form"><%= f.input :description,label:"描述"%></div>
 <div class="group_form"><%= f.input :price,label:"价格"%></div>
 <div class="group_form"><%= f.input :age_limit,label:"年限"%></div>
-<%= f.submit '提交',data: {disable_with: "Submiting..."}%>
+<% if @equib.image.present? %>
+<span>目前机器图片</span>
+<%= image_tag(@equib.image.thumb.url,class: "thumbnail")%>
+<% else %>
+<%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail")%>
+<% end %>
+<div class="group_form"><%= f.input :image, as: :file%></div>
+<%= f.submit '提交',data: {disable_with: "提交中..."}, class: "btn btn-primary btn-lg"%>
 <% end %>
